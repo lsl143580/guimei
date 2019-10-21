@@ -1,0 +1,25 @@
+header,footer{width: 980px;margin: 0 auto;}
+
+.a_color{color: #000000;}
+/*一，header 开始 ==============================================================================*/
+header{height: 140px;position: relative;background: url(../img/h_bg.jpg) no-repeat center center;}
+header > div{position: absolute;}
+header > div:nth-child(1){height: 24px;width: 436px;top: 15px;right: 15px;font: 14px/24px "微软雅黑";}
+header > div:nth-child(1) ul li{float: left;width: 60px;height: 24px;}
+header > div:nth-child(1) ul .lis1{width:24px;height:24px;background: url(../img/icon.gif) -3px -1px;}
+header > div:nth-child(1) ul .lis2{width:24px;height:24px;background: url(../img/icon.gif) -44px -1px;}
+header > div:nth-child(1) ul .lis3{width:24px;height:24px;background:url(../img/icon.gif) -88px -1px;}
+header > div:nth-child(1) ul .lis4{width:24px;height:24px;background:url(../img/icon.gif) -129px -1px;}
+header > div:nth-child(1) ul .hea_li1{float: left;width:40px;height:24px;background: url(../img/icon.gif) -2px -27px;text-align: center;}
+header > div:nth-child(2){width:406px;bottom: 49px;right: 135px;font: 14px/21px "微软雅黑";color: #716A5A;letter-spacing: 1px;}
+header > div:nth-child(3) {width: 668px;height: 32px;  left: 2px;top: 96px;}
+header > div:nth-child(3) li{width: 83.5px;height: 32px;float: left;text-align: center;font: 15px/32px "微软雅黑";font-weight: 800;}
+/*header end ==============================================================================*/
+
+
+/*二，footer 开始 ==============================================================================*/
+footer{height: 125px;}
+footer > p{text-align: center;}
+footer > .p1{margin-bottom: 5px;}
+footer > .xff{margin: 0 auto;width: 360px;}
+/*footer end ==============================================================================*/

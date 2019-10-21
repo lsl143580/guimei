@@ -1,0 +1,111 @@
+section {
+				background: url(../img/login_bg.gif) no-repeat;
+				min-height: 430px;
+				padding-top: 50px;
+				box-sizing: border-box;
+			}
+			.font6{color: #969696;}
+			section a{
+				color: #225CC6;text-decoration: underline;
+			}
+			
+			.main_left {
+				width: 520px;
+				height: 330px;
+				box-sizing: border-box;
+				padding-left: 30px;
+			}
+			
+			.main_left .login {
+				padding-left: 140px;
+			}
+			
+			.main_left .login td {
+				height: 35px;
+			}
+			.main_left ul{
+				padding-left: 30px;
+			}
+			.main_left ul>li {
+				height: 35px;
+				margin-left: 45px;
+			}
+			
+			.main_right {
+				width: 380px;
+				height: 330px;
+				border-left: 1px solid #989898;
+				box-sizing: border-box;
+				padding-left: 23px;
+			}
+			
+			.main_right .p1 {
+				font: 18px/24px "黑体";
+				color: #FE9947;
+				height: 56.5px;
+				box-sizing: border-box;
+				padding-top: 10px;
+			}
+			
+			.main_right>table td {
+				height: 35px;
+			}
+			
+			.main_right>table .sdsdsf.a1 {
+				background: url(../img/icon.gif) no-repeat 1px -123px;
+			}
+			
+			.main_right>table .sdsdsf.a2 {
+				background: url(../img/icon.gif) no-repeat 1px -160px;
+			}
+			
+			.main_right>table .sdsdsf.a3 {
+				background: url(../img/icon.gif) no-repeat 1px -202px;
+			}
+			
+			.main_right>table .sdsdsf.a4 {
+				background: url(../img/icon.gif) no-repeat 1px -242px;
+			}
+			
+			.sdsd {
+				font-weight: 800px;
+				color: #02A0FF;
+			}
+			
+			.sdsdsdfassdfg {
+				height: 79px;
+				width: 304px;
+				background: #FDF7E7;
+				border: 1px solid #FF953B;
+				box-sizing: border-box;
+				padding-top: 6px;
+			}
+			
+			.sdsdsdfassdfg .e1,
+			.sdsdsdfassdfg .e2 {
+				height: 28px;
+				width: 237px;
+				border: 1px solid #F6A458;
+				margin: 0 auto;
+				background: white;
+				margin-bottom: 5px;
+				text-align: center;
+				font: 14px/28px "微软雅黑";
+				position: relative;
+			}
+			
+			.i2i2 {
+				position: absolute;
+				width: 30px;
+				height: 28px;
+				background: url(../img/icon.gif);
+				left: 15px;
+			}
+			
+			.i2i2.ii {
+				background-position: -14px -280px;
+			}
+			
+			.i2i2.ii1 {
+				background-position: -15px -319px;
+			}

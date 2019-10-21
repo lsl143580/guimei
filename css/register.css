@@ -1,0 +1,16 @@
+section{width: 980px;margin: 0 auto;}
+
+
+/*二，section 开始 ==============================================================================*/
+section{height: 528px;position: relative;background: url(../img/reg_bg.gif) no-repeat;}
+section > div{position: absolute;}
+section > div:nth-child(1){width: 555px;height: 439px;top: 60px;left: 40px;margin-left:50px;}
+.from1 tr > td {height: 40px;}
+.from1 tr > td:nth-child(1){text-align: right;} 
+section > div:nth-child(2){width: 272px;height: 289px;top: 74px;right: 58px;}
+section > div:nth-child(2)>p{font-weight: 800;margin-bottom: 10px;}
+section > div:nth-child(2)>textarea{width: 272px;height: 259px;}
+/*section end ==============================================================================*/
+
+
+.font6{color: #969696;}

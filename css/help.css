@@ -1,0 +1,13 @@
+/*左边内容*/
+.help_main {height: 550px;position: relative;}
+.help_main .m_left{width: 183px;height: 550px;background: url(../img/customer.jpg);padding-top: 180px;box-sizing: border-box;}
+.help_main .m_left .ggs{}
+.help_main .m_left .gg{margin: 0 auto 5px auto;width: 160px;}
+.m_left .gg .cone p{text-align: center;color: #FF3807;font-weight: bold;cursor: pointer;}
+/*右边内容*/
+.help_main .m_right{width: 785px;height: 548px;border: 1px solid #CC7274;position: absolute;left: 198px;padding: 18px;box-sizing: border-box;}
+.help_main .m_right .m_right_p1{font:18px/40px "宋体";font-weight: 600;}
+.help_main .m_right .m_right_line1{height: 4px;border-bottom: 1px solid #CC7274;background: #FDDECA;margin: 18px 0;}
+.help_main .m_right .m_right_p2{font-size: 16px;}
+.help_main .m_right .buzhou{background: url(../img/reg_step.jpg);height: 47px;width: 495px;margin: 18px 0;}
+.help_main .m_right>ul>li{font-size: 16px;list-style-image:url(../img/list_icon.gif) ;list-style-position: inside ;}

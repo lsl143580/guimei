@@ -1,0 +1,23 @@
+.biaoti1{height: 60px;box-sizing: border-box;padding-top: 19px;}
+.biaoti1 .biaoti1_a1{width: 108px;height: 23px;}
+.biaoti1 .biaoti1_a2{width: 300px;height: 23px;margin-left: 60px;box-sizing: border-box;padding-top: 9px;
+font: 16px/20px "微软雅黑";}
+/*.productNum{width: 40px;}*/
+
+.biaoti2{background: url(../img/buytitle_bg.gif) no-repeat; height: 32px;padding-left: 60px;font: 14px/32px "微软雅黑";}
+.biaoti2.chu{font-weight: 800;}
+.sahngpins>table th{text-align: left;}
+.sahngpins>table tr{font-size:14px ;height: 30px;}
+.sahngpins>table td:nth-child(1){}
+.sahngpins>table td:nth-child(2){color: #989898;}
+.sahngpins>table td:nth-child(3){color: #F81711;}
+.sahngpins>table td:nth-child(4){font-size:14px ;}
+.sahngpins>table td:nth-child(5){font-size:14px ;}
+.sahngpins>table td:nth-child(5) >input{width: 40px;}
+.sahngpins>table td:nth-child(5) >img{width: 20px;cursor: pointer;vertical-align: middle;padding-bottom: 4px;}
+.sahngpins>table td:nth-child(6){font-size:14px ;}
+.sahngpins>table input{text-align: center;}
+.sahngpins>table a{text-decoration: none;color: #000000;}
+.tjxx{padding-left: 95px;padding-top: 15px;}
+.tjxx td{height: 40px;font: 16px/30px "微软雅黑";margin: 100px 0;}
+.tjxx tr td:nth-child(1){text-align: right;}
