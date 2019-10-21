@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/shopCar.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/shopCar.js" ></script>
+		<script>
+		$(function() {
+			var shengs = {
+			"1": "河南省",
+			"2": "山西省"
+		};
+		var shis = {
+			"1": {
+				"110": "郑州市",
+				"120": "开封市",
+				"130": "洛阳市"
+			},
+			"2": {
+				"210": "太原市",
+				"220": "晋城市",
+				"230": "长治市"
+			}
+		};
+		var qus = {
+			"230": {
+				"231": "沁县",
+				"232": "平顺县",
+				"233": "黎城县"
+			},
+			"220": {
+				"221": "泽州县",
+				"222": "阳城县",
+				"223": "陵川县"
+			},
+			"210": {
+				"211": "迎泽区",
+				"212": "晋源区  ",
+				"213": "小店区 "
+			},
+			"110": {
+				"111": "金水区",
+				"112": "管城区",
+				"113": "中原区"
+			},
+			"120": {
+				"121": "龙亭区",
+				"122": "鼓楼区",
+				"123": "祥符区"
+			},
+			"130": {
+				"131": "西工区",
+				"132": "洛龙区",
+				"133": "涧西区"
+			}
+		};
+			
+			var sheng = $("#sheng");
+			var shi = $("#shi");
+			var qu = $("#qu");
+			for(var x in shengs) {
+				sheng.append($("<option value=" + x + ">" + shengs[x] + "</option>"))
+			}
+			liandong(sheng,shi,shis);
+			liandong(shi,qu,qus);
+			
+			function liandong(superiorSelect,Select,data){//上级   ， 本级  ， 本机数据
+				superiorSelect.on("change", function() {
+					$(this).nextAll().hide();
+					$(this).next().show();
+				var id = superiorSelect.val();
+				if(id != -1) {
+					Select.empty();
+					Select.append($("<option value='-1'>请选着</option>"))
+					for(var x in data[id]) {
+						Select.append($("<option value=" + x + ">" + data[id][x] + "</option>"))
+					}
+				}else{
+					$(this).nextAll().hide();
+				}
+			});
+			}
+			
+			var from1 =$("#kdtj");
+			var name = $("#name1");
+			var address = $("#address1");
+			var mobile = $("#mobile");
+			var xxdz = $("#xxdz");
+			
+			var name_b = false;
+			var address_b = true;
+			var mobile_b = false;
+			var xxdz_b = false;
+			name.on("blur",function(){
+				if($(this).val()!=""){
+					name_b=true;
+					$(this).parent().next().text("　正确！").css("color","green");
+				}else{
+					$(this).parent().next().text("　不能为空").css("color","red");
+				}
+			});
+			xxdz.on("blur",function(){
+				if($(this).val()!=""){
+					xxdz_b=true;
+					$(this).parent().next().text("　正确！").css("color","green");
+				}else{
+					$(this).parent().next().text("　不能为空").css("color","red");
+				}
+			});
+			address.on("blur",function(){
+				if($(this).val()!=""){
+					address_b=true;
+					$(this).parent().next().text("　正确！").css("color","green");
+				}else{
+					$(this).parent().next().text("　不能为空").css("color","red");
+				}
+			});
+			mobile.on("blur",function(){
+				if($(this).val()!=""){
+					var rge = /^1\d{10}$/;
+					if(rge.test($(this).val())){
+						$(this).parent().next().text("　正确！").css("color","green");
+						mobile_b=true;
+					}else{
+					$(this).parent().next().text("　请正确填写手机号").css("color","red");
+				}
+				}else{
+					$(this).parent().next().text("　不能为空").css("color","red");
+				}
+			});
+			from1.submit(function(){
+				if (name_b&&address_b&&mobile_b&&xxdz_b&&sheng.val()!=-1&&shi.val()!=-1&&qu.val()!=-1) {
+					return true;
+				}
+				if(qu.val()==-1){
+					qu.parent().parent().next().text("请选着完整").css("color","red");
+				}else{
+					alert("请正确填写！");
+				}
+				
+				return false;
+			});
+		});
+	</script>
+	</head>
+
+	<body>
+
+		<header>
+			<iframe src="public_page/header.html" frameborder="no" scrolling="no"></iframe>
+		</header>
+
+		<section>
+			<div>
+				<div class="biaoti1">
+					<div class="biaoti1_a1 fl">
+						<img src="img/mycart.gif" />
+					</div>
+					<div class="biaoti1_a2 fl">
+						全场运费一律2元　　　　简易计算器
+					</div>
+				</div>
+				<div class="biaoti2 chu">
+					确认商品 价格与交易条件
+				</div>
+				<div class="sahngpins">
+					<table style="margin-left: 20px;" id="table1">
+						<thead>
+							<tr>
+								<th width="383">商品名</th>
+								<th width="114">原价</th>
+								<th width="110">优惠价</th>
+								<th width="89">打折</th>
+								<th width="150">　　　数量</th>
+								<th width="100">删除</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							
+							<tr>
+								<td>耳机</td>
+								<td>￥258.00</td>
+								<td>￥129.00</td>
+								<td>5折</td>
+								<td><img class="sumAdd" src="img/jia.png" />　<input class="productNum" type="text" value="2">　<img class="sumSub" src="img/jian.png" />　</td>
+								<td>
+									<a href="#" class="deletee">删除</a>
+								</td>
+							</tr>
+							<tr>
+								<td>电视</td>
+								<td>￥258.00</td>
+								<td>￥129.00</td>
+								<td>5折</td>
+								<td><img class="sumAdd" src="img/jia.png" />　<input class="productNum" type="text" value="2">　<img class="sumSub" src="img/jian.png" />　</td>
+								<td>
+									<a href="#" class="deletee">删除</a>
+								</td>
+							</tr>
+							<tr>
+								<td>洗衣机</td>
+								<td>￥258.00</td>
+								<td>￥129.00</td>
+								<td>5折</td>
+								<td><img class="sumAdd" src="img/jia.png" />　<input class="productNum" type="text" value="2">　<img class="sumSub" src="img/jian.png" />　</td>
+								<td>
+									<a href="#" class="deletee">删除</a>
+								</td>
+							</tr>
+							
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>继续挑选商品</td>
+								<td style="color: #000000;text-align: right;">应付金额：</td>
+								<td colspan="2" style="color: black;text-align: left;font-weight: 800;">￥258.00</td>
+								<td colspan="3" style="color: black;">你总共节省：<span></span>元</td>
+							</tr>
+						</tfoot>
+					</table>
+					<style>
+						section .sahngpins>.noGoods {
+							height: 200px;
+							background: ##02A0FF;
+							padding-top: 20px;
+							padding-right: 87px;
+							display: none;
+						}
+						
+						section .sahngpins>.noGoods>.noGoods_con {
+							width: 200px;
+							margin: 0 auto;
+						}
+						
+						section .sahngpins>.noGoods>.noGoods_con>img {
+							width: 300px;
+						}
+					</style>
+					<div class="noGoods">
+						<div class="noGoods_con">
+							<img src="img/asdd.png" />
+						</div>
+					</div>
+				</div>
+				<div class="biaoti2">
+					补充您的邮件地址和联系人基本信息
+				</div>
+					
+				<div class="tjxx">
+					<form id="kdtj" action="#" method="get">
+					<table>
+						<tr>
+							<td>收件人：</td>
+							<td><input type="text" id="name1" name="name1" /></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>省份/城市/区(县)：</td>
+							<td><div id="add">
+			
+			<select name="" id="sheng">
+				<option value="-1">请选省</option>
+			</select>
+			
+			<select style="display: none;" name="" id="shi">
+				<option value="-1">请选市</option>
+			</select>
+		
+			<select style="display: none;" name="" id="qu">
+				<option value="-1">请选区</option>
+			</select>
+		</div></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>详细地址：</td>
+							<td><input type="text" id="xxdz" name="xxdz"/> (街道/楼号/门牌号)</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>手机号：</td>
+							<td><input type="text" id="mobile" name="mobile"/></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="image" src="img/submit.gif" /></td>
+							<td></td>
+						</tr>
+					</table>
+					</form>
+				</div>
+			</div>
+		</section>
+		<style>
+
+		</style>
+		<footer>
+			<iframe src="public_page/footer.html" frameborder="no" scrolling="no"></iframe>
+		</footer>
+	</body>
+
+</html>

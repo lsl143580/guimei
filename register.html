@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/register.js"></script>
+</head>
+
+<body>
+
+<header>
+    <iframe src="public_page/header.html" frameborder="no" scrolling="no"></iframe>
+    <script>
+        $(function () {
+            var loginName= $("#loginName");
+            loginName.on("click",function () {
+
+            });
+        });
+    </script>
+</header>
+<section>
+    <div>
+        <form action="user" class="from1" method="post" id="loginf">
+            <table>
+                <tr>
+                    <td style="font-size: 12px">姓名：</td>
+                    <td>
+                        <input type="text" name="username" /><span class="a1"><span class="font6"> (2-4个汉字）</span></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>登录名：</td>
+                    <td>
+                        <input id="loginName" type="text" name="loginname" /><samp class="a2"><span class="font6">（不能全是数字，只能是6—20位的数字和字母）</span></samp>
+                    </td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td>
+                        <input type="password" name="password" /><span class="a3"><span class="font6">（包含6-20位的数字和字母）</span></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>再次输入密码：</td>
+                    <td>
+                        <input type="password" name="password1" /><span class="a4"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>电子邮箱：</td>
+                    <td>
+                        <input type="text" name="email" /><span class="a5"><span class="font6">（必须包含@字符）</span></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>性别：</td>
+                    <td>
+                        <label><input type="radio" name="sex" value="男" checked=""/><img src="img/Male.gif" />男</label>
+                        <label><input type="radio" name="sex" value="女" /><img src="img/Female.gif" />女</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>身份证号：</td>
+                    <td>
+                        <input type="text" name="IDCard" /><span class="a6" class="font6"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>爱好：</td>
+                    <td class="ah1">
+                        <label><input type="checkbox" name="hobby" value="运动" style="vertical-align: middle;" />运动</label>
+                        <label><input type="checkbox" name="hobby" value="聊天" style="vertical-align: middle;" />聊天</label>
+                        <label><input type="checkbox" name="hobby" value="玩游戏" style="vertical-align: middle;" />玩游戏</label><sapn class="a8"><span  class="font6">　至少选中2个</span></sapn>
+                    </td>
+                </tr>
+                <tr>
+                    <td>地址：</td>
+                    <td>
+                        <input type="text" name="address" />
+                        <span class="a7" class="font6"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="hidden" name="gn" value="register">
+                    </td>
+                    <td>
+                        <input id="submit" type="image" src="img/submit.gif" value="提交" />
+                        <input id="reset" type="image" src="img/reset.gif" value="重填" />
+                    </td>
+                </tr>
+            </table>
+            <!--<input type="submit" value=""/>-->
+        </form>
+    </div>
+    <div>
+        <p>
+            <img src="img/read.gif" />阅读贵美网服务协议
+        </p>
+        <textarea style="resize:none" readonly>
+欢迎阅读服务条款协议，本协议阐述之条款和条件适用于您使用Gmgw.com网站的各种工具和服务。
+本服务协议双方为贵美与贵美网用户，本服务协议具有合同效力。
+
+贵美的权利和义务
+1.贵美有义务在现有技术上维护整个网上交易平台的正常运行，并努力提升和改进技术，使用户网上交易活动的顺利。
+2.对用户在注册使用贵美网上交易平台中所遇到的与交易或注册有关的问题及反映的情况，贵美应及时作出回复。
+3.对于在贵美网网上交易平台上的不当行为或其它任何贵美认为应当终止服务的情况，贵美有权随时作出删除相关信息、终止服务提供等处理，而无须征得用户的同意。
+4.因网上交易平台的特殊性，贵美没有义务对所有用户的注册资料、所有的交易行为以及与交易有关的其他事项进行事先审查。
+				</textarea>
+    </div>
+</section>
+<style>
+
+</style>
+<footer>
+    <iframe src="public_page/footer.html" frameborder="no" scrolling="no"></iframe>
+</footer>
+</body>
+
+</html>

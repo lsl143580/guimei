@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+	</head>
+
+	<body>
+
+		<header>
+			<iframe src="public_page/header.html" frameborder="no" scrolling="no"></iframe>
+		</header>
+		<style>
+			
+		</style>
+		<script>
+			window.onload = function() {
+				var from = document.getElementById("loginf");
+				var zh = from.zh;
+				var mm = from.mm;
+				var tab = from.getElementsByTagName("table")[0];
+				var zhts = zh.parentNode.nextElementSibling;
+				var mmts = mm.parentNode.nextElementSibling;
+				//
+				var reg = /^[0-9a-zA-Z]{6,20}$/;
+
+				var zhb = false;
+				var mmb = false;
+
+				zh.onblur = function() {
+					if(this.value == "") {
+						zhts.innerText = "　不能为空";
+						zhts.style.color = "red";
+						mmb = false;
+					} else {
+						if(reg.test(this.value)) {
+							zhts.innerText = "　输入正确！";
+							zhts.style.color = "green";
+							zhb = true;
+						} else {
+							zhts.innerText = "　可包含字母和数字,6-20位";
+							zhts.style.color = "red";
+							mmb = false;
+						}
+					}
+				}
+				mm.onblur = function() {
+					if(this.value == "") {
+						mmts.innerText = "　不能为空";
+						mmts.style.color = "red";
+						mmb = false;
+					} else {
+						if(reg.test(this.value)) {
+							mmts.innerText = "　输入正确！";
+							mmts.style.color = "green";
+							mmb = true;
+						} else {
+							mmts.innerText = "　可包含字母和数字,6-20位";
+							mmts.style.color = "red";
+							mmb = false;
+						}
+					}
+				}
+				from.onsubmit = function() {
+					if(zhb && mmb) {
+						return true;
+					}
+					if(zh.value == "") {
+						zhts.innerText = "　不能为空";
+						zhts.style.color = "red";
+					} 
+					if(mm.value == "") {
+						mmts.innerText = "　不能为空";
+						mmts.style.color = "red";
+					} 
+					return false;
+				}
+			}
+		</script>
+		<section>
+
+			<div class="main_left fl">
+				<div>
+					<img src="img/logintitle.gif" />
+				</div>
+				<form action="login.html" id="loginf" class="login">
+					<table>
+						<tr>
+							<td>会员名：</td>
+							<td><input type="text" name="zh"></td>
+							<td class="font6"> 　可包含字母和数字,6-20位</td>
+						</tr>
+						<tr>
+							<td>密　码：</td>
+							<td><input type="text" name="mm"></td>
+							<td class="font6"> 　可包含字母和数字,6-20位</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="image" src="img/login.gif" /></td>
+							<td></td>
+						</tr>
+					</table>
+				</form>
+				<ul>
+					<li>&delta;
+						　<a href="javascript:void(0);">什么是安全登录。</a>
+					</li>
+					<li>&delta;　香港会员（繁体中文用户）由此
+						<a href="javascript:void(0);">登入。</a>
+					</li>
+					<li>&delta;
+						　<a href="javascript:void(0);">密码安全贴士。</a>
+					</li>
+					<li>&delta;　防止病毒或木马窃取您的账户信息，
+						<a href="javascript:void(0);">在线检查</a>您的电脑是否安全。</li>
+				</ul>
+			</div>
+			<div class="main_right fl">
+				<p class="p1">注册会员</p>
+				<table>
+					<tr>
+						<td class="sdsdsf a1">　　　</td>
+						<td><b class="sdsd">　便宜有好货！</b>超过7000万件商品任你选、</td>
+					</tr>
+					<tr>
+						<td class="sdsdsf a2">　　　</td>
+						<td><b class="sdsd">　买卖更安全！</b>交易超安全。</td>
+					</tr>
+					<tr>
+						<td class="sdsdsf a3">　　　</td>
+						<td><b class="sdsd">　免费开网店！</b>轻松赚钱交友。</td>
+					</tr>
+					<tr>
+						<td class="sdsdsf a4">　　　</td>
+						<td><b class="sdsd">　超人气社区！</b>彩活动每一天</td>
+					</tr>
+				</table>
+				<div style="padding-left:83px ;">
+					<input type="image" src="img/registernow.gif" />
+				</div>
+				<div class="sdsdsdfassdfg">
+					<div class="e1">
+						<div class="i2i2 ii"></div>您已经是会员？
+						<a href="#">由此登入</a>
+					</div>
+					<div class="e2">
+						<div class="i2i2 ii1"></div>繁体中文用户由此
+						<a href="#">注册</a>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+		<style>
+
+		</style>
+		<footer>
+			<iframe src="public_page/footer.html" frameborder="no" scrolling="no"></iframe>
+		</footer>
+	</body>
+
+</html>
